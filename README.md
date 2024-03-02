@@ -7,7 +7,8 @@ Proyecto creado con react y el preprocesador LESS utilizando gulp
 
 ![image](https://github.com/AlexMunozDevWeb/signup-form-react/assets/39050227/837bd08d-a3a8-4f07-a512-e6cb45b7f9c6)
 
-![image](https://github.com/AlexMunozDevWeb/signup-form-react/assets/39050227/37e9534a-a7bf-4041-b132-7972c539753e)
+![image](https://github.com/AlexMunozDevWeb/signup-form-react/assets/39050227/defd902e-37f4-4049-982f-2fd0f4864382)
+
 
 ### Añadiendo reset.css al proyecto
 - Descarga reset.css utilizando npm o yarn.
