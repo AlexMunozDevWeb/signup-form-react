@@ -1,12 +1,13 @@
 # SIGN UP REACT FORM
 
 ### Añadiendo reset.css al proyecto
-Descarga reset.css utilizando npm o yarn.
+- Descarga reset.css utilizando npm o yarn.
 
 npm install reset-css
+
 yarn add reset-css
 
-Importa reset.css en el archivo principal App.js para que se aplique en toda la aplicación.
+- Importa reset.css en el archivo principal App.js para que se aplique en toda la aplicación.
 
 import 'reset-css';
 
@@ -17,5 +18,4 @@ Pasos para instalar SASS
 - npm install -D sass
 - Crear achivo styles.scss
 - Importar archivo styles.css
-  import './styles.scss'; // Importa el archivo SCSS
-  
+import './styles.scss'; // Importa el archivo SCSS
