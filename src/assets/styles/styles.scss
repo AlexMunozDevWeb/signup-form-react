@@ -1,13 +1,41 @@
+// fonts
+@font-face {
+  font-family: 'Poppins';
+  src: url('/src/assets/fonts/Poppins-Bold-700.ttf') format('truetype');
+  font-weight: 700;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Poppins';
+  src: url('/src/assets/fonts/Poppins-SemiBold-600.ttf') format('truetype');
+  font-weight: 600;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Poppins';
+  src: url('/src/assets/fonts/Poppins-Medium-500.ttf') format('truetype');
+  font-weight: 500;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Poppins';
+  src: url('/src/assets/fonts/Poppins-Regular-400.ttf') format('truetype');
+  font-weight: 400;
+  font-style: normal;
+}
 
 // Colors
 $red: hsl(0, 100%, 74%); 
 $green: hsl(154, 59%, 51%);
 $blue: hsl(248, 32%, 49%);
+
 $dark-blue: hsl(249, 10%, 26%) ;
 $grayish-blue: hsl(246, 25%, 77%);
+$white: #ffffff;
 
 // Fonts 
-$f-size: 16px;
+$f-h1-size: 28px;
+$f-p-size: 16px;
 
 $fw-400: 400;
 $fw-500: 500;
@@ -17,34 +45,213 @@ $fw-700: 700;
 
 // Sizes 
 $mobile: 375px;
-$desktop: 1440px;
+$tablet: 768px;
 
-// fonts
-@font-face {
-  font-family: 'Poppins';
-  src: url('../assets/fonts/Poppins-Bold-700.ttf') format('truetype');
-  font-weight: 700;
-  font-style: normal;
-}
-@font-face {
-  font-family: 'Poppins';
-  src: url('../assets/fonts/Poppins-Medium-500.ttf') format('truetype');
-  font-weight: 500;
-  font-style: normal;
-}
-@font-face {
-  font-family: 'Poppins';
-  src: url('../assets/fonts/Poppins-SemiBold-600.ttf') format('truetype');
-  font-weight: 600;
-  font-style: normal;
-}
-@font-face {
-  font-family: 'Poppins';
-  src: url('../assets/fonts/Poppins-Regular-400.ttf') format('truetype');
-  font-weight: 400;
-  font-style: normal;
+html { box-sizing: border-box; }
+
+*, *:before, *:after { box-sizing: inherit; }
+
+h1{ line-height: 36px; }
+
+p { line-height: 27px; font-size: $f-p-size; }
+
+h1, p, input { font-family: 'Poppins', sans-serif; }
+
+.c-white{
+  color: $white;
 }
 
-h1{
-  font-size: $f-size;
+section.main-container{
+  background: url('../images/bg-intro-mobile.png');
+  padding: 70px 5%;
+
+  position: relative;
+  
+  min-height: 100vh;
+  width: 100%;
+
+  @media(min-width: $tablet){
+    background: url('../images/bg-intro-desktop.png');
+    background-size: cover;
+    // background-repeat: no-repeat;
+  }
+  
+  .content{
+
+    @media( min-width: $tablet ){
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      grid-template-rows: auto 1fr;
+      
+      margin: 0 auto;
+      max-width: 1070px;
+      
+    }
+    
+    .header-form{
+      grid-row: 1 / span 2;
+      grid-column: 1; 
+
+      margin: auto 0;
+
+      h1.title, p.descrption{
+        text-align: center;
+
+        @media( min-width: $tablet ){
+          text-align: left;
+        }
+
+      }
+
+      h1.title {
+        font-size: $f-h1-size;
+        font-weight: $fw-600;
+
+      }
+
+      p.descrption {
+        margin-top: 25px;
+
+      }
+
+    }
+
+    .card{
+      grid-row: 1 ;
+      grid-column: 2; 
+
+      background-color: $blue;
+
+      border-radius: 10px;
+      box-shadow: 0px 7px 0px 0px rgba(0,0,0,0.2);
+
+      padding: 10px 50px;
+      margin-top: 55px;
+
+      p{
+        color: $white;
+        text-align: center;
+        
+        span.bold{
+          font-weight: $fw-700;
+        }
+      }
+    }
+
+    .sign-up-form{
+      background-color: $white;
+      
+      display: flex;
+      flex-direction: column;
+
+      grid-row: 2;
+      grid-column: 2; 
+
+      border-radius: 10px;
+      border-color: $dark-blue;
+      box-shadow: 0px 7px 0px 0px rgba(0,0,0,0.2);
+
+      gap: 15px;
+      margin-top: 20px;
+      padding: 22px;
+      
+      .input-container{
+
+        input {
+          color: $dark-blue;
+          border-radius: 5px;
+          font-weight: $fw-600;
+  
+          padding: 15px;
+          
+          width: 100%;
+  
+          &[type="text"], &[type="password"] {
+            border: solid 1px $grayish-blue;
+          
+            &:focus, &:active{
+              border: solid 1px $blue;
+              outline: none;
+  
+            }
+  
+          }
+  
+          &[type="submit"] {
+            background-color: $green;
+            border: unset;
+            box-shadow: 0px 4px 0px 0px hsl(154, 59%, 42%);
+            color: $white;
+  
+            cursor: pointer;
+            text-transform: uppercase;
+            transition: all .3s ease-in-out;
+  
+            &:hover{
+              background-color: hsl(154, 59%, 60%);;
+            }
+          }
+  
+          &::placeholder{
+            font-weight: $fw-600;
+          }
+  
+        }
+
+        &.error{
+          position: relative;
+          input{
+            border: solid 1px $red;
+          }
+          &::after{
+            content: url('../images/icon-error.svg');
+            position: absolute;
+
+            right: 15px;
+            top: 50%;
+
+            height: 24px;
+            width: 24px;
+            transform: translateY(-50%);
+
+          }
+        }
+
+      }
+
+      p.copy-text{
+        font-size: 14px;
+        color: $grayish-blue;
+
+        padding: 0 10px;
+
+        line-height: 25px;
+        text-align: center;
+
+        a{
+          color: $red;
+          font-weight: $fw-600;
+          text-decoration: none;
+
+        }
+      }
+
+    }
+
+  }
+    
+  
+  &::after{
+    content: '';
+    background-color: $red;
+    
+    position: absolute;
+    left: 0;
+    top: 0;
+
+    height: 100%;
+    width: 100%;
+    z-index: -1;
+  }
+
 }

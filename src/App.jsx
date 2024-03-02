@@ -1,6 +1,9 @@
-import { useState } from 'react'
-// import viteLogo from '/vite.svg'
-import './App.css'
+import { useState } from 'react';
+// import viteLogo from '/vite.svg';
+import './App.css';
+import HeaderForm from './assets/components/HeaderForm';
+import Card from './assets/components/Card';
+import Form from './assets/components/Form';
 
 function App() {
 
@@ -8,7 +11,13 @@ function App() {
 
   return (
     <>
-      <h1>Proyecto inicial</h1>
+      <section className='main-container'>
+        <div className="content">
+          <HeaderForm />
+          <Card />
+          <Form />
+        </div>
+      </section>
     </>
   )
 
