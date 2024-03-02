@@ -1,0 +1,50 @@
+
+// Colors
+$red: hsl(0, 100%, 74%); 
+$green: hsl(154, 59%, 51%);
+$blue: hsl(248, 32%, 49%);
+$dark-blue: hsl(249, 10%, 26%) ;
+$grayish-blue: hsl(246, 25%, 77%);
+
+// Fonts 
+$f-size: 16px;
+
+$fw-400: 400;
+$fw-500: 500;
+$fw-600: 600;
+$fw-700: 700;
+// - Family: [Poppins]()
+
+// Sizes 
+$mobile: 375px;
+$desktop: 1440px;
+
+// fonts
+@font-face {
+  font-family: 'Poppins';
+  src: url('../assets/fonts/Poppins-Bold-700.ttf') format('truetype');
+  font-weight: 700;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Poppins';
+  src: url('../assets/fonts/Poppins-Medium-500.ttf') format('truetype');
+  font-weight: 500;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Poppins';
+  src: url('../assets/fonts/Poppins-SemiBold-600.ttf') format('truetype');
+  font-weight: 600;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Poppins';
+  src: url('../assets/fonts/Poppins-Regular-400.ttf') format('truetype');
+  font-weight: 400;
+  font-style: normal;
+}
+
+h1{
+  font-size: $f-size;
+}
