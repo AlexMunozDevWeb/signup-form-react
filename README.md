@@ -1,7 +1,5 @@
 # Sign up from - react
 
-## Visualización del proyecto
-
 Proyecto creado con react, utilizando SASS como preprocesador. 
 [Visualizar el proyecto](https://jade-buttercream-0bc470.netlify.app/)
 
