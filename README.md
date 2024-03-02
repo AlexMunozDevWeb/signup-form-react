@@ -2,8 +2,7 @@
 
 ## Visualización del proyecto
 
-Proyecto creado con react y el preprocesador LESS utilizando gulp
-[Visualizar el proyecto]([https://alex-full-stuck-developer.netlify.app/](https://jade-buttercream-0bc470.netlify.app/))
+[Visualizar el proyecto](https://jade-buttercream-0bc470.netlify.app/)
 
 ![image](https://github.com/AlexMunozDevWeb/signup-form-react/assets/39050227/837bd08d-a3a8-4f07-a512-e6cb45b7f9c6)
 
